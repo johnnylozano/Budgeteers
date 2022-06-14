@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budgeteers</title>
-    <!-- !BOX ICONS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
-    <!-- !HEADER -->
-    <header class="header" id="home">
-        <nav class="navbar container">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Budgeteers</title>
+      <!-- !BOX ICONS -->
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      />
+      <link rel="stylesheet" href="./assets/css/styles.css" />
+      <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon" />
+   </head>
+   <body>
+      <!-- !HEADER -->
+      <header class="header" id="home">
+         <nav class="navbar container">
             <a href="./index.html" class="navbar__logo">
-                <img src="./assets/img/logo.png" class="navbar__logo-img" alt="">
-                <div class="logo-title">Budgeteers</div>
+               <img
+                  src="./assets/img/budgeteers_logo-sk.png"
+                  class="navbar__logo-img"
+                  alt=""
+               />
+               <div class="logo-title">Budgeteers</div>
             </a>
             <div class="navbar__buttons">
-                <button class="button icon-button menu-toggle-button">
-                    <i class="bx bx-menu open-icon"></i>
-                    <i class="bx bx-x close-icon"></i>
-                </button>
-                <button class="button icon-button theme-toggle-button">
-                    <i class="bx bx-toggle-left theme-off"></i>
-                    <i class="bx bx-toggle-right theme-on"></i>
-                </button>
+               <button class="button icon-button menu-toggle-button">
+                  <i class="bx bx-menu open-icon"></i>
+                  <i class="bx bx-x close-icon"></i>
+               </button>
+               <button class="button icon-button theme-toggle-button">
+                  <i class="bx bx-toggle-left theme-off"></i>
+                  <i class="bx bx-toggle-right theme-on"></i>
+               </button>
             </div>
             <div class="menu">
-                <ul class="list">
-                    <li class="list-item">
-                        <a href="#" class="list-link">Home</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">About Us</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#" class="list-link">Home</a>
-                    </li>
-                </ul>
+               <ul class="list">
+                  <li class="list-item">
+                     <a href="#" class="list-link">Home</a>
+                  </li>
+                  <li class="list-item">
+                     <a href="#" class="list-link">About Us</a>
+                  </li>
+               </ul>
             </div>
-        </nav>
-    </header>
+         </nav>
+      </header>
 
-    
-</body>
+      <!-- !APP  -->
+      <h2>MY ACCOUNT</h2>
+
+      <div class="app-container">
+         <h4>Your Balance</h4>
+         <h1 id="balance">$0.00</h1>
+
+         <div class="inc-exp-container">
+            <div>
+               <h4>Income</h4>
+               <p id="money-plus" class="money plus">+$0.00</p>
+            </div>
+            <div>
+               <h4>Expense</h4>
+               <p id="money-minus" class="money minus">-$0.00</p>
+            </div>
+         </div>
+
+         <h3>History</h3>
+         <ul id="list" class="app-list">
+            <!-- <li class="minus">
+          Cash <span>-$400</span><button class="delete-btn">x</button>
+        </li> -->
+         </ul>
+
+         <h3>Add new transaction</h3>
+         <form id="form">
+            <div class="form-control">
+               <label for="text">Text</label>
+               <input type="text" id="text" placeholder="Enter text..." />
+            </div>
+            <div class="form-control">
+               <label for="amount"
+                  >Amount <br />
+                  Income: Positive (+) || Expense: Negative (-)</label
+               >
+               <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <button class="btn">Add transaction</button>
+         </form>
+      </div>
+
+      <!--! === FOOTER === -->
+      <div class="footer__container container">
+         <div class="footer__group">
+            <h2 class="footer__title title title--main">
+               Manage your transactions the right way
+            </h2>
+         </div>
+         <span class="footer__separator"></span>
+         <div class="footer__group">
+            <span class="footer__copyright"
+               >&copy; 2022 Budgeteers, Inc. All rights reserved.</span
+            >
+         </div>
+      </div>
+
+      <script src="./assets/js/app.js"></script>
+   </body>
 </html>
