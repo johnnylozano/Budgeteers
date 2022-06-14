@@ -1,0 +1,173 @@
+/*! === FONTS === */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+/*! === VARIABLES === */
+:root {
+   --light-clr: #fff;
+   --light-clr-2: #bed2c9;
+   --light-clr-3: #e1e7dd;
+   --dark-clr: #2e2e2e;
+   /* --dark-clr: #231616; */
+   --body-font-clr: #bdbdbd;
+   --body-bg-clr: #222222;
+   /* --body-bg-clr: #17111e; */
+   --title-font: "Bebas Neue", cursive;
+   --body-font: "Poppins", sans-serif;
+}
+
+/*! === BASE === */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: var(--body-font);
+   font-size: 1.4rem;
+   line-height: 1.5;
+   background-color: var(--dark-clr);
+   color: var(--light-clr-2);
+   overflow-x: hidden;
+}
+
+body.dark-theme {
+    --light-clr-2: var(--dark-clr);
+    --dark-clr: var(--light-clr-2);
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+ul {
+   list-style: none;
+}
+
+img,
+picture {
+   display: block;
+   max-width: 100%;
+}
+
+input,
+button {
+   font: inherit;
+   background-color: transparent;
+   border: none;
+   color: var(--light-clr-2);
+}
+
+/*! === COMPONENTS === */
+.container {
+    max-width: 96rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/*! === HEADER === */
+.header {
+    margin-bottom: 5rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    position: relative;
+}
+
+.navbar__logo {
+    font-family: 'Pirata One', 'Bebas Neue', sans-serif;
+    display: flex;
+    font-size: 2.6rem;
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.navbar__logo-img {
+    width: 100%;
+    max-width: 3.5rem;
+}
+
+.navbar__buttons {
+    display: flex;
+    column-gap: 0.5rem;
+    padding: 0 0.5rem;
+    background-color: var(--body-bg-clr);
+    color: var(--light-clr-2);
+    border-radius: 0.4rem;
+    position: relative;
+    z-index: 999;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.bx {
+    font-size: 2.4rem;
+    margin: auto;
+}
+.icon-button {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    margin: auto;
+}
+
+.close-icon,
+.theme-on {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    right: 1.55rem;
+    background-color: var(--light-clr);
+    color: var(--dark-clr);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.4rem;
+    z-index: -1;
+    pointer-events: none;
+    transform: scale(0);
+    transition: transform 0.25s 0.25s cubic-bezier(1, 0, 0, 1);
+}
+
+.list {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.menu > .list {
+    opacity: 0;
+}
+
+.menu > .list .list-link {
+    text-transform: uppercase;
+}
+
+.list-link {
+    font-size: 1.4rem;
+}
+
+.list-link:hover, 
+.list-link:focus {
+    opacity: 0.7;
+}
+
+/*! === JAVASCRIPT STYLES === */
+.active.menu {
+    z-index: initial;
+    pointer-events: initial;
+}
