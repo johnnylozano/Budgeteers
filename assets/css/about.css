@@ -326,16 +326,16 @@ button {
 
 @media (max-width: 570px) {
    .about__text {
-      width: 45rem;
+      width: 35rem;
    }
    
    .about__text-header h2 {
-      font-size: 3.8rem;
+      font-size: 3.5rem;
       margin-bottom: 1.5rem;
    }
    
    .about__text-header h3 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       margin-bottom: 2.6rem;
       font-style: italic;
    }
@@ -343,5 +343,11 @@ button {
    .about__text-description p {
       font-size: 1.8rem;
       padding-bottom: 0.8rem;
+   }
+}
+
+@media (max-width: 390px) {
+   .about__text {
+      width: 22rem;
    }
 }
